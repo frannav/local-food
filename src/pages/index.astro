@@ -1,0 +1,57 @@
+---
+import Layout from '@/layouts/Layout.astro';
+import Card from '@/components/Card.astro';
+import TEST_IMAGE from '@/assets/test-img.jpg';
+---
+
+<Layout title="Local-Food">
+	<main>
+		<h1>Local-
+			<span class="text-gradient">Food</span>
+		</h1>
+		<ul role="list" class="link-card-grid">
+			<Card
+				title="Condumius"
+				services={[
+					'📞612345678',
+					'Delivery 🛵', 
+					'Recogida en restaurante 🚶‍♂️'
+				]}
+				img={TEST_IMAGE}
+				openAt='Lunes a Viernes de 13:00 a 16:00'
+			/>
+		</ul>
+	</main>
+</Layout>
+
+<style>
+	main {
+		margin: auto;
+		padding: 1rem;
+		width: 800px;
+		max-width: calc(100% - 2rem);
+		color: white;
+		font-size: 20px;
+		line-height: 1.6;
+	}
+	h1 {
+		font-size: 4rem;
+		font-weight: 700;
+		line-height: 1;
+		text-align: center;
+		margin-bottom: 1em;
+	}
+	.text-gradient {
+		background-image: var(--accent-gradient);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		background-size: 400%;
+		background-position: 0%;
+	}
+	.link-card-grid {
+		display: grid;
+		grid-template-rows: repeat(auto-fit, minmax(4ch, 1fr));
+		gap: 2rem;
+		padding: 0;
+	}
+</style>

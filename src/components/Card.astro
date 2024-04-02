@@ -6,7 +6,7 @@ import { Image } from 'astro:assets';
 interface Props {
 	title: string;
 	services: string[];
-	img: ImageMetadata;
+	img: string;
 	openAt: string;
 }
 
@@ -16,7 +16,7 @@ const { title, services, img, openAt } = Astro.props;
 <li class="restaurant-card">
 	<div >
 		<div class="image-wrapper">
-			<Image src={img} alt={title} class="restaurant-image" style="height: 100%; width: 100%; object-fit: cover;"/>
+			<!-- <Image src={img} alt={title} class="restaurant-image" style="height: 100%; width: 100%; object-fit: cover;"/> -->
 		</div>
 		<h2>
 			{title}

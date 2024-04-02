@@ -6,10 +6,11 @@
       "@/*": [
         "./src/*"
       ]
-    }
+    },
+    "jsx": "react-jsx",
+    "jsxImportSource": "react"
   },
   "exclude": [
     "public"
   ]
 }
-
